@@ -1,0 +1,20 @@
+@use "./../vars.scss" as vars;
+section{
+    margin: 10px vars.$spaces;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: minmax(100%,1fr);
+ 
+}
+@media(min-width:768px){
+    section{
+        
+    grid-template-columns: repeat(2, minmax(50%,1fr));
+    }
+}
+@media(min-width:992px){
+    section{
+        
+    grid-template-columns: repeat(3, minmax(calc(100%/3),1fr));
+    }
+}

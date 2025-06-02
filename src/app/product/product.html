@@ -1,0 +1,17 @@
+<article [ngClass]="forHome?'home':''">
+    <img [src]="product?.image" />
+    <div class="details">
+        <h3>{{product?.name}}</h3>
+        <p class="desc">{{product?.description}}</p>
+
+        <p class="price">Price: {{product?.price|currency:"USD":"symbol"}}</p>
+        <p class="status">Status: @if (product?.qty!>0) {
+            <span class="stock label">In stock</span>
+            }
+            @else {
+
+            <span class="not-stock label"><strong>Not Avaliable</strong></span>
+            }
+        </p>
+    </div>
+</article>

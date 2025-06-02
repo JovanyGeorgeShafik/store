@@ -1,0 +1,17 @@
+<form>
+    <div>
+        <fa-icon [icon]="faBagShopping" class="icon" size="lg"></fa-icon>
+    <input type="text" placeholder="Product Name" name="name" id="name" (keydown.enter)="focusInput($event,minPrice)">
+    </div>
+    <div>
+        <fa-icon [icon]="faDollarSign" class="icon" size="lg"></fa-icon>
+    <input type="number" min="1.00" step="0.01"  placeholder="Min Price" (keydown.enter)="focusInput($event,maxPrice)" #minPrice name="minPrice" id="minPrice">
+    </div>
+    <div>
+        <fa-icon [icon]="faDollarSign" class="icon" size="lg"></fa-icon>
+    <input type="number" min="1.00" step="0.01" placeholder="Max Price" #maxPrice name="maxPrice" id="maxPrice">
+    </div>
+    <button type="submit">
+        <fa-icon [icon]="faSearch" size="lg"></fa-icon>
+    </button>
+</form>

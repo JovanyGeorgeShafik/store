@@ -1,0 +1,52 @@
+article {
+    .price {
+
+        margin-bottom: 10px;
+
+        margin-block: 10px;
+        border-radius: 9999px;
+    }
+
+    .label {
+        padding: 10px;
+        border-radius: 10px;
+
+        &.stock {
+            background-color: oklch(92.5% 0.084 155.995);
+            color: oklch(26.6% .065 152.934);
+        }
+
+        &.not-stock {
+            background-color: oklch(88.5% .062 18.334);
+            color: oklch(25.8% .092 26.042);
+        }
+    }
+
+    &.home .details {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    box-shadow: 0 0 20px 0 #00000030;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &.home .desc {
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+}

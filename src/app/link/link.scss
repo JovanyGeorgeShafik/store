@@ -1,0 +1,9 @@
+@use "sass:color" as color;
+@use "../vars.scss" as vars;
+a{
+    background-color:color-mix(in srgb, vars.$primary-color 70%, #000 20%);
+    color: vars.$text-color;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
