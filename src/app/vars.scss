@@ -1,3 +1,13 @@
-$primary-color:#008cff;
-$text-color:#fff;
-$spaces:100px;
+@use "sass:math";
+@use "sass:string";
+
+
+/// @param {Number} $px number of pixels
+/// @returns {Length} `$px` converted to rem
+@function pxtorem($px) {
+    @return math.div($px, 16)*1rem;
+}
+
+$primary-color: #008cff;
+$text-color: #fff;
+$spaces: pxtorem(100);

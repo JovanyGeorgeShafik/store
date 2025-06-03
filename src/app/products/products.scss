@@ -1,20 +1,22 @@
 @use "./../vars.scss" as vars;
-section{
-    margin: 10px vars.$spaces;
-    gap: 20px;
+
+section {
+    margin: vars.pxtorem(10) vars.$spaces;
+    gap: vars.pxtorem(20);
     display: grid;
-    grid-template-columns: minmax(100%,1fr);
- 
-}
-@media(min-width:768px){
-    section{
-        
-    grid-template-columns: repeat(2, minmax(50%,1fr));
+    grid-template-columns: minmax(100%, 1fr);
+
+    @media(min-width:vars.pxtorem(768)) {
+        & {
+
+            grid-template-columns: repeat(2, minmax(50%, 1fr));
+        }
     }
-}
-@media(min-width:992px){
-    section{
-        
-    grid-template-columns: repeat(3, minmax(calc(100%/3),1fr));
+
+    @media(min-width:vars.pxtorem(992)) {
+        & {
+
+            grid-template-columns: repeat(3, minmax(calc(100%/3), 1fr));
+        }
     }
 }

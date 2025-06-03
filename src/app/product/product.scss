@@ -1,15 +1,31 @@
+@use "./../vars.scss" as vars;
+
 article {
+    h3 {
+        font-size: vars.pxtorem(23);
+    }
+
+    .view {
+        background-color: vars.$primary-color;
+        color: vars.$text-color;
+        padding: vars.pxtorem(10);
+        border-radius: vars.pxtorem(10);
+        text-decoration: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+
     .price {
 
-        margin-bottom: 10px;
+        margin-bottom: vars.pxtorem(10);
 
-        margin-block: 10px;
-        border-radius: 9999px;
+        margin-block: vars.pxtorem(10);
+        border-radius: vars.pxtorem(9999);
     }
 
     .label {
-        padding: 10px;
-        border-radius: 10px;
+        padding: vars.pxtorem(10);
+        border-radius: vars.pxtorem(10);
 
         &.stock {
             background-color: oklch(92.5% 0.084 155.995);
@@ -28,15 +44,20 @@ article {
         flex-direction: column;
     }
 
+    .title {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
     img {
         width: 100%;
         object-fit: cover;
-        border-radius: 20px;
+        border-radius: vars.pxtorem(10);
     }
 
-    box-shadow: 0 0 20px 0 #00000030;
-    border-radius: 10px;
-    padding: 20px;
+    box-shadow: 0 0 vars.pxtorem(20) 0 #00000030;
+    border-radius: vars.pxtorem(10);
+    padding: vars.pxtorem(20);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -49,4 +70,9 @@ article {
 
     }
 
+    &:not(.home) {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, minmax(50%, 1fr));
+    }
 }

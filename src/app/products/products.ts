@@ -11,6 +11,7 @@ import { ProductSchmea } from '../../schema/product';
 export class Products {
   products: ProductSchmea[] = [
     {
+      id: 1,
       name: "Apple",
       image: "https://th.bing.com/th/id/OIP.oUTReRStZQE0RfP8-7XoswHaEm?w=260&h=180&c=7&r=0&o=5&pid=1.7",
       price: 33.3,
@@ -18,6 +19,7 @@ export class Products {
       description: "This is an apple"
     },
     {
+      id: 2,
       name: "Apple",
       image: "https://th.bing.com/th/id/OIP.oUTReRStZQE0RfP8-7XoswHaEm?w=260&h=180&c=7&r=0&o=5&pid=1.7",
       price: 33.3,
@@ -25,6 +27,7 @@ export class Products {
       description: "This is an apple"
     },
     {
+      id: 3,
       name: "Apple",
       price: 33.3,
       image: "https://th.bing.com/th/id/OIP.oUTReRStZQE0RfP8-7XoswHaEm?w=260&h=180&c=7&r=0&o=5&pid=1.7",
